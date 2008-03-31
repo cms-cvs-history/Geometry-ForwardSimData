@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
-<DDDefinition xmlns="http://www.cern.ch/cms/DDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cern.ch/cms/DDL ../../DetectorDescription/Schema/DDLSchema.xsd">
+<DDDefinition xmlns="http://www.cern.ch/cms/DDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cern.ch/cms/DDL ../../../DetectorDescription/Schema/DDLSchema.xsd">
 
-<SpecParSection label="TotemProdCuts.xml">
- <SpecPar name="TotemAllPart">
-  <PartSelector path="//TotemT1" />
-  <PartSelector path="//TotemT2" />
-  <Parameter name="CMSCutsRegion" value="TotemRegion" eval="false"/>
-  <Parameter name="ProdCutsForElectrons" value="1*mm"/>
-  <Parameter name="ProdCutsForPositrons" value="1*mm"/>
-  <Parameter name="ProdCutsForGamma" value="10*mm"/>
+<SpecParSection label="TotemProdCuts.xml" eval="true">
+  <SpecPar name="TotemAllPart">
+   <PartSelector path="//TotemT1" />
+   <PartSelector path="//TotemT2" />
+   <Parameter name="CMSCutsRegion" value="TotemRegion" eval="false"/>
+   <Parameter name="ProdCutsForElectrons" value="1*mm"/>
+   <Parameter name="ProdCutsForPositrons" value="1*mm"/>
+   <Parameter name="ProdCutsForGamma" value="10*mm"/>
  </SpecPar>
  <SpecPar name="TotemSensitivePart">
-  <PartSelector path="//Internal.*TotemT1_Plane.*" />  
-  <PartSelector path="//TotemT2gem_driftspace7r" /> 
-  <Parameter name="CMSCutsRegion" value="TotemSensitiveRegion" eval="false"/>
+  <PartSelector path="//Internal_CSC.*" />
+  <PartSelector path="//TotemT2gem_driftspace7r" />
+  <Parameter name="CMSCutsRegion"  value="TotemSensitiveRegion" eval="false"/> 
   <Parameter name="ProdCutsForElectrons" value="1*mm"/>
   <Parameter name="ProdCutsForPositrons" value="1*mm"/>
   <Parameter name="ProdCutsForGamma" value="10*mm"/>
